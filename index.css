@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styles */
+nav#navTop {
+    width: 960px;
+    margin: 0 auto;
+    background: #ccc;
+    height: 40px;
+}
+
+nav#navTop ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav#navTop ul li {
+    float: left;
+    border-right: solid 1px #fff;
+    position: relative; /* Added position relative for submenu positioning */
+}
+
+nav#navTop ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 30px;
+}
+
+/* Styles for Selected and Hover States */
+.selected,
+nav#navTop ul li:hover > a {
+    background: red;
+    color: #fff;
+}
+
+/* Submenu Styles */
+nav#navTop ul li > ul {
+    display: none; /* Hide submenu by default */
+    position: absolute;
+    top: 100%; /* Position it below the parent menu item */
+    left: 0;
+    width: 159px;
+    background: #666;
+}
+
+nav#navTop ul li:hover > ul {
+    display: block; /* Show submenu on parent hover */
+}
+
+nav#navTop ul li > ul li {
+    border-bottom: solid 1px #fff;
+}
+/* menu cap n */
+nav#navTop ul li>ul li>ul{
+    margin-left: 159px;
+    margin-top: -40px;
+}
